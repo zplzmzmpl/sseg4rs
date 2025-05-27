@@ -1,7 +1,7 @@
 # sseg4rs
 Semantic segmentation tasks (both fully and weakly supervised) using your own remote sensing datasets
 
-# Fully Supervision Semantic Segment
+## Fully Supervision Semantic Segment
 
 code from https://github.com/WangLibo1995/GeoSeg
 
@@ -26,7 +26,7 @@ write test script for your dataset reference other official dataset and run test
 
 `python bigbay_test.py -c config/bigbay/ftunetformer.py -o your_output_path --rgb`
 
-# Weakly Supervision Semantic Segment
+## Weakly Supervision Semantic Segment
 
 code from https://github.com/LiZhuoHong/Paraformer
 
@@ -53,7 +53,7 @@ run *test.py*
 
 see *assessmentv1.py* after you got **Ground Truth**
 
-# Scripts in Tools
+## Scripts in Tools
 
 - ***clip_v7.py***
 
@@ -100,37 +100,11 @@ run main() and scripts will output assessment html file, classified image, model
 
   set your gt classname map in row 769 like:
 
-  `gt_classnames = {`
-
-  ​     `0: "canals",`
-
-  ​     `1: "cultivation",`
-
-  ​     `2: "forest",`
-
-  ​     `3: "other_builds",`
-
-  ​     `4: "reservoir_pits",`
-
-  ​     `5: "rural",`
-
-  ​     `6: "urban"}`
+  `gt_classnames = {0: "canals",1: "cultivation",2: "forest",3: "other_builds",4: "reservoir_pits",5: "rural",6: "urban"}`
 
   set your model prediction classname map like:
 
-  ​    `result_classnames = {`
-
-  ​      `1:"forest",`
-
-  ​      `4:"canals",`
-
-  ​      `6:"reservoir_pits",`
-
-  ​      `9:"urban",`
-
-  ​      `10:"rural",`
-
-  ​      `11:"other_builds"}`
+  ​    `result_classnames = {1:"forest",4:"canals",6:"reservoir_pits",9:"urban",10:"rural",11:"other_builds"}`
 
   run script in command line like:
 
@@ -139,9 +113,9 @@ run main() and scripts will output assessment html file, classified image, model
   what we will get:
 
   - assessment summary report(.txt)
-  - confused classes(.png)
+- confused classes(.png)
   - confusion matrix(.png)
-  - error map(.tif)
+- error map(.tif)
 
 <div align='center'>    <img src='imgs/confused_classes.png' width='40%'>    <img src='imgs/confusion_matrix.png' width='40%'></div>
 
